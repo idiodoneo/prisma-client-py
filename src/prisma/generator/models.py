@@ -861,6 +861,7 @@ class Field(BaseModel):
     is_read_only: bool = FieldInfo(alias='isReadOnly')
     is_generated: bool = FieldInfo(alias='isGenerated')
     is_updated_at: bool = FieldInfo(alias='isUpdatedAt')
+    native_type: Optional[Tuple[str, List[str]]] = FieldInfo(alias='nativeType', default=None)
 
     default: Optional[Union['DefaultValue', object, List[object]]] = None
     has_default_value: bool = FieldInfo(alias='hasDefaultValue')
